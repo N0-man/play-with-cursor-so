@@ -33,10 +33,12 @@ yarn run
 <br >
 <hr >
 
-*Note*: Eryting inside callout is command to AI and `this is user action`
-> command to AI
-
-**Base Hello World Program that came as sample after installing Cursor**
+*Note*: 
+- Eryting inside callout is command to AI
+  > command to AI
+- `this is user action`
+- Text starting with 🤖 is response text from AI
+- Below program is the Hello World react application that came as sample after installing Cursor
 
 ```javascript
 import React from 'react';
@@ -78,7 +80,7 @@ const App = () => (
 
 > refactor code
 
-Sure, I can refactor your code to make it more modular. Here's a version where each part of the app is broken down into its own component:
+🤖 Sure, I can refactor your code to make it more modular. Here's a version where each part of the app is broken down into its own component:
 
 ```javascript
 const Header = () => (
