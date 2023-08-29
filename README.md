@@ -18,13 +18,15 @@ yarn run
 ```
 
 ## Impressions
-- The original recommendation to test individual components such as `Header`, `TextInput` and `TooltipButton` via render - assuming that all of these components are an export - it needed an explicit instruction to test the behaviour using `App` component
-- Refactoring for moving components into a separate file does not seems to work
-- `expect(...).toBeInTheDocument is not a function` ERROR - had to explicitly include jest-dom
-- The default suggestion was to use fireEvent even if userEvent is recommended
-- The first test generated for App was basic render and needed additional inputs to test further behaviour
+- Generating code via IDE prompt or AI Chat is super simple. Though there are inconsistencies on how the code is generated between the two but the AI learns pretty well based on your acceptance or rejections, your re-attempts and refactor.
 - Generating the test in the IDE using Cmd+K spits out the test in the same file
-- Providing command such as `generate test in seperate file` overrides the code with commented test in the same file
+- Providing command such as `generate test in seperate file` replaces/overrides the code with commented test in the same file. Test generation is better on AI chat to first review and copy over. 
+- Refactoring for moving components into a separate file doesnt seem to work.
+- The first attempt for test generated for App asserting if the compenent is getting render - it needed additional input to generate more elaborative tests
+- The first attempt to write more elaborative test resulted into testing individual components such as `Header`, `TextInput` and `TooltipButton` as if all these components are an export - it needed an explicit instruction to test the behaviour using `App` component
+- The output test did not had all the required imports e.g. `expect(...).toBeInTheDocument is not a function` ERROR - had to explicitly include jest-dom
+- The test prefered using fireEvent over more recomended approach of userEvent. Needed an explicit command to refactor.
+
 
 **Overall a decent React developer should be able to leverage this along with IDE shortcuts and react knowledge to be more effective**
 
