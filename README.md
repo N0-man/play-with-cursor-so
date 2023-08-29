@@ -106,7 +106,7 @@ const App = () => (
 );
 ```
 
-In this refactored version, the Header, TextInput, and TooltipButton are all separate functional components. This makes the code easier to read and maintain, and it also makes it easier to reuse these components elsewhere in your app if needed.
+🤖 In this refactored version, the Header, TextInput, and TooltipButton are all separate functional components. This makes the code easier to read and maintain, and it also makes it easier to reuse these components elsewhere in your app if needed.
 
 `I had to manually copy the code into app.js`
 
@@ -139,7 +139,7 @@ const App = () => (
 
 >write testing using react testing library
 
-Sure, here's how you can write tests for the App component using React Testing Library. This test will check if the header "Hello world", the text input, and the button "Click me" are rendered correctly.
+🤖 Sure, here's how you can write tests for the App component using React Testing Library. This test will check if the header "Hello world", the text input, and the button "Click me" are rendered correctly.
 
 ```javascript
 import { render, screen } from '@testing-library/react';
@@ -159,11 +159,11 @@ test('renders header, text input, and button', () => {
 });
 ```
 
-This test uses the `render` function from React Testing Library to render the `App` component. Then it uses the `getByText` and `getByPlaceholderText` functions to find the elements with the text "Hello world", the placeholder "Enter text here", and the text "Click me". Finally, it uses Jest's expect function to assert that these elements are in the document.
+🤖 This test uses the `render` function from React Testing Library to render the `App` component. Then it uses the `getByText` and `getByPlaceholderText` functions to find the elements with the text "Hello world", the placeholder "Enter text here", and the text "Click me". Finally, it uses Jest's expect function to assert that these elements are in the document.
 
 > what other tests can be written
 
-Given the current structure of your components, here are some additional tests you could write using React Testing Library:  
+🤖 Given the current structure of your components, here are some additional tests you could write using React Testing Library:  
   
 1. **Test if the tooltip appears on mouse over**: You can simulate a mouse over event on the TooltipButton and check if the tooltip text appears.
 
@@ -206,11 +206,11 @@ test('renders correct text', () => {
 });
 ```
 
-Remember to import each component from its respective file in the actual tests.
+🤖 Remember to import each component from its respective file in the actual tests.
 
 > can you write these testing using userEvent instead of fireEvent
 
-Sure, `userEvent` is generally recommended over `fireEvent` as it provides a more realistic simulation of user interactions. userEvent is a library built on top of fireEvent that provides more advanced simulation of browser interactions. Here's how you can rewrite the tests using userEvent:
+🤖 Sure, `userEvent` is generally recommended over `fireEvent` as it provides a more realistic simulation of user interactions. userEvent is a library built on top of fireEvent that provides more advanced simulation of browser interactions. Here's how you can rewrite the tests using userEvent:
 
 1. **Test if the tooltip appears on mouse over:**
 ```javascript
@@ -252,11 +252,11 @@ test('renders correct text', () => {
 });
 ```
 
-Remember to install @testing-library/user-event if you haven't already, using the command npm install --save @testing-library/user-event.
+🤖 Remember to install @testing-library/user-event if you haven't already, using the command npm install --save @testing-library/user-event.
 
 > can you write all the testing using App
 
-Sure, here's how you can write tests for the `App` component using React Testing Library and `userEvent`. These tests will check if the header "Hello world", the text input, and the button "Click me" are rendered correctly, and also if the tooltip appears on mouse over and the text input accepts input.
+🤖 Sure, here's how you can write tests for the `App` component using React Testing Library and `userEvent`. These tests will check if the header "Hello world", the text input, and the button "Click me" are rendered correctly, and also if the tooltip appears on mouse over and the text input accepts input.
 
 ```javascript
 import { render, screen } from '@testing-library/react';
@@ -291,4 +291,4 @@ test('accepts input', () => {
 });
 ```
 
-These tests use the render function from React Testing Library to render the App component. Then they use the getByText and getByPlaceholderText functions to find the elements with the text "Hello world", the placeholder "Enter text here", and the text "Click me". The userEvent.hover and userEvent.type functions are used to simulate user interactions. Finally, Jest's expect function is used to assert that these elements are in the document, the tooltip appears, and the input value changes.
+🤖 These tests use the render function from React Testing Library to render the App component. Then they use the getByText and getByPlaceholderText functions to find the elements with the text "Hello world", the placeholder "Enter text here", and the text "Click me". The userEvent.hover and userEvent.type functions are used to simulate user interactions. Finally, Jest's expect function is used to assert that these elements are in the document, the tooltip appears, and the input value changes.
